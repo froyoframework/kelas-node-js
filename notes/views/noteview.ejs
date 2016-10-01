@@ -1,0 +1,9 @@
+<% include top %>
+<p><%= note ? note.body : "" %></p>
+<p>Key: <%= notekey %></p>
+<% if (notekey) { %>
+    <hr/>
+    <p><a href="/notedestroy?key=<%= notekey %>">Delete</a>
+     | <a href="/noteedit?key=<%= notekey %>">Edit</a></p>
+<% } %>
+<% include bottom %>
